@@ -1,16 +1,21 @@
-#include <array>
-#include <iomanip>
+// Pointer.cpp : working with pointer in C++
+// referencing Properties of pointer in C++
 #include <iostream>
 using namespace std;
 
-int main(int argc, char *argv[]) {
-  int *countPtr{nullptr};
+int main() {
+  int *countPtr{nullptr}; // pointer variable set to nullptr
   int counter{10};
 
-  // point countPtr to counter
+  // point countPtr to counter memory address
   countPtr = &counter;
 
-  cout << "The address of counter: " << countPtr << endl;
+  // display counter address and address value stored in countPtr
+  cout << "The address of counter: " << &counter
+       << "\nThe value of countPtr: " << countPtr << endl;
+  // display value countPtr pointer to
+  cout << "The value stored in count: " << counter
+       << "\nThe value of *countPtr: " << *countPtr << endl;
 
   return 0;
 }

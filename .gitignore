@@ -8,3 +8,9 @@ CMakeLists.txt
 *.o
 *.a
 */.vscode
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.d

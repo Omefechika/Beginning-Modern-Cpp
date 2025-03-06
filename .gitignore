@@ -7,4 +7,4 @@ CMakeLists.txt
 [C++ objects and executables]
 *.o
 *.a
-*/.vs
+*/.vscode

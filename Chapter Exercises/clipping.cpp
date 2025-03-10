@@ -19,10 +19,10 @@ void imageProcessing(array<array<signed int, column>, rows> &);
 int main()
 {
     array<array<signed int, column>, rows> pixel{
-        -4, -3, -2, -1,
-        0, 1, 2, 3,
-        252, 253, 254, 255,
-        256, 257, 258, 259};
+        {-4, -3, -2, -1},
+        {0, 1, 2, 3},
+        {252, 253, 254, 255},
+        {256, 257, 258, 259}};
 
     cout << "Source data: " << endl;
     // loop through the row
@@ -66,12 +66,14 @@ void imageProcessing(array<array<signed int, column>, rows> &imagePixel)
         {
             // if current pixel value is lesser than 0
             // set to lowerLimit
-            if (currentPixel < lowerLimit){
+            if (currentPixel < lowerLimit)
+            {
                 currentPixel = lowerLimit;
             }
             // set current pixel to 255, if value is greater than upperlimit
-            else if(currentPixel > upperLimit){
-                currentPixel = upperLimit; 
+            else if (currentPixel > upperLimit)
+            {
+                currentPixel = upperLimit;
             }
         }
     }

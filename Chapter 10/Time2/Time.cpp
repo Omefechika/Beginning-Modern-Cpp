@@ -41,6 +41,7 @@ void Time::setMinute(int m)
     {
         minute = m;
     }
+    
     else
     {
         throw invalid_argument("Minute must be 0-60");

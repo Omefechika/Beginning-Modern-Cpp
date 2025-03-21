@@ -14,16 +14,18 @@ int main()
     // new employee object instance
     Employee employee2("John",
                        "Amazon",
-                        35);
-    employee2.IntroduceYourself();
-
-    employee2.setName("Alex");
+                       35);
     employee2.IntroduceYourself();
 
     // testing getters
-    cout << employee1.getName() << " is " << employee1.getAge() 
-    << " years old" << endl;
+    cout << employee1.getName() << " is " << employee1.getAge()
+         << " years old" << endl;
+    cout << employee2.getName() << " is " << employee2.getAge()
+         << " years old" << endl
+         << endl;
 
-    cout << employee2.getName() << " is " << employee2.getAge() 
-    << " years old" << endl;
+    // testing virtual function AskForPromotion
+    employee1.AskForPromotion();
+    employee2.AskForPromotion();
+    cout << endl;
 }

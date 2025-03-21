@@ -4,19 +4,32 @@
 #include <string>
 using std::string;
 
-
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
 class Employee
 {
 public:
-    string Name;
-    string Company;
-    int Age;
+    // Employee class constructor
+    explicit Employee(string, string, int = 0);
+
+    // setters prototype
+    void setName(const string&);
+    void setCompany(const string&);
+    void setAge(const int&);
+
+    // getters prototype
+    string getName() const;
+    string getCompany() const;
+    int getAge() const;
 
     // function displays current employee object data
     void IntroduceYourself() const;
+
+private:
+    string Name{};
+    string Company{};
+    int Age{0};
 };
 
 #endif

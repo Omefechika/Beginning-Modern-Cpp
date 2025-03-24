@@ -16,7 +16,7 @@ public:
     // member functions for arithmetic operations,
     // results are stored in the reduced form
     string add(const Rational &) const; // adds two class objects
-    void subtract(const Rational &);    // subtract two class objects
+    string subtract(const Rational &);    // subtract two class objects
     void multiply(const Rational &);    // product of two class objects
     void divide(const Rational &);      // qoutient of two class objects
     string toRationalString() const;    // string representationof a fraction

@@ -60,28 +60,71 @@ string Rational::add(const Rational &newRationalObject) const
     // if objects denominator are equal
     if (denominator == newRationalObject.denominator)
     {
-        int newNumerator = (numerator * newRationalObject.denominator) +
-                           (newRationalObject.numerator * denominator);
-        int newDenominator = (denominator * newRationalObject.denominator);
+        int newDenominator = denominator;
+        int newNumerator = (numerator * (newDenominator / denominator)) +
+                           (newRationalObject.numerator * (newDenominator /
+                                                           newRationalObject.denominator));
 
-        newNumerator /= std::gcd(newNumerator, newDenominator);
-        
-        cout << newNumerator << " and " << newDenominator << endl;
         // ouput result
         output << "(" << numerator << "/" << denominator
                << ") + (" << newRationalObject.numerator
                << "/" << newRationalObject.denominator << ") = "
-               << newNumerator << "/" << newDenominator/denominator;
+               << newNumerator << "/" << newDenominator;
     }
-    else
+    else if (denominator != newRationalObject.denominator)
     {
-        
+        int newDenominator = denominator * newRationalObject.denominator;
+        cout << "This: " << newDenominator << endl;
+        int newNumerator = (numerator * (newDenominator / denominator)) +
+                           (newRationalObject.numerator * (newDenominator /
+                                                           newRationalObject.denominator));
+
+        // ouput result
+        output << "(" << numerator << "/" << denominator
+               << ") + (" << newRationalObject.numerator
+               << "/" << newRationalObject.denominator << ") = "
+               << newNumerator << "/" << newDenominator;
     }
 
     return output.str();
 }
 
-void Rational::subtract(const Rational &) {} // subtract two class objects
+// subtract two class objects
+string Rational::subtract(const Rational &newRationalObject)
+{
+    ostringstream output;
+
+    // if objects denominator are equal
+    if (denominator == newRationalObject.denominator)
+    {
+        int newDenominator = denominator;
+        int newNumerator = (numerator * (newDenominator / denominator)) -
+                           (newRationalObject.numerator * (newDenominator /
+                                                           newRationalObject.denominator));
+
+        // ouput result
+        output << "(" << numerator << "/" << denominator
+               << ") - (" << newRationalObject.numerator
+               << "/" << newRationalObject.denominator << ") = "
+               << newNumerator << "/" << newDenominator;
+    }
+    else if (denominator != newRationalObject.denominator)
+    {
+        int newDenominator = denominator * newRationalObject.denominator;
+        cout << "This: " << newDenominator << endl;
+        int newNumerator = (numerator * (newDenominator / denominator)) -
+                           (newRationalObject.numerator * (newDenominator /
+                                                           newRationalObject.denominator));
+
+        // ouput result
+        output << "(" << numerator << "/" << denominator
+               << ") - (" << newRationalObject.numerator
+               << "/" << newRationalObject.denominator << ") = "
+               << newNumerator << "/" << newDenominator;
+    }
+
+    return output.str();
+}
 void Rational::multiply(const Rational &) {} // product of two class objects
 void Rational::divide(const Rational &) {}   // qoutient of two class Rational::obostringstream output;
 

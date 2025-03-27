@@ -1,5 +1,6 @@
 // Name.h
 // class function member defined in name.cpp
+#pragma once 
 #include <string>
 using std::string;
 
@@ -9,27 +10,27 @@ using std::string;
 class Name
 {
 private:
-    string firstName{}, lastName{};
-    string middleName{}, salutation;
+    string firstName, lastName;
+    string middleName, salutation;
 
 public:
     // constructor
-    explicit Name(string, string, string, string);
+    Name(string, string, string, string);
 
     // string representationof full name
     string toString() const;
 
     // getters and setters for all class data members
     string getFirstName() const;
-    void setFirstName(string);
+    void setFirstName(const string &);
 
     string getLastName() const;
-    void setLastName(string);
+    void setLastName(const string &);
 
     string getMiddleName() const;
-    void setMiddleName(string);
+    void setMiddleName(const string &);
 
     string getSalutation() const;
-    void setSalutation(string);
+    void setSalutation(const string &);
 };
 #endif

@@ -4,10 +4,7 @@ using namespace std;
 
 int main(){
 
-    Name n1{"cat", "dogs", "chipmonk", "Sir"};
-    
-    cout << n1.getFirstName() << endl;
-    n1.setFirstName("Richard");
+    Name n1{"Richard", "Clancy", "Hoobs", "Sir"};
 
     cout << n1.getFirstName() << endl;
     cout << n1.getLastName() << endl;

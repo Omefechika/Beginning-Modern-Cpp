@@ -24,7 +24,7 @@ std::string Name::toString() const
     return output.str();
 }
 
-void Name::setFirstName(std::string fName)
+void Name::setFirstName(const std::string &fName)
 {
     firstName = fName;
 }
@@ -32,14 +32,14 @@ void Name::setFirstName(std::string fName)
 std::string Name::getFirstName() const { return firstName; }
 
 // Last Name
-void Name::setLastName(std::string lName)
+void Name::setLastName(const std::string &lName)
 {
     lastName = lName;
 }
 std::string Name::getLastName() const { return lastName; }
 
 // Middle Name
-void Name::setMiddleName(std::string midName)
+void Name::setMiddleName(const std::string &midName)
 {
     middleName = midName;
 }
@@ -47,7 +47,7 @@ void Name::setMiddleName(std::string midName)
 std::string Name::getMiddleName() const { return middleName; }
 
 // Salutation
-void Name::setSalutation(std::string salutation)
+void Name::setSalutation(const std::string &salutation)
 {
     this->salutation = salutation;
 }

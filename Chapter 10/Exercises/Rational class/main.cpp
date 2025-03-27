@@ -9,4 +9,13 @@ int main()
 
     cout << r1.add(r2) << endl;
     cout << r2.subtract(r1) << endl;
+
+    // testign string representation
+    cout << "String representation: "
+         << r1.toRationalString() << endl;
+    cout << "String representation: "
+         << r2.toRationalString() << endl;
+
+    // testing toDouble function
+    cout << r1.toDouble() << endl;
 }

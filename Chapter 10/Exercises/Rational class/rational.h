@@ -20,7 +20,7 @@ public:
     void multiply(const Rational &);    // product of two class objects
     void divide(const Rational &);      // qoutient of two class objects
     string toRationalString() const;    // string representationof a fraction
-    double toDouble();                  // return fraction as a double
+    void toDouble();                  // return fraction as a double
 
 private:
     int numerator;

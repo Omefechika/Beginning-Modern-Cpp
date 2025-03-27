@@ -132,12 +132,14 @@ void Rational::divide(const Rational &) {}   // qoutient of two class Rational::
 string Rational::toRationalString() const
 {
     ostringstream output;
-    output << "";
+    output << numerator << "/" << denominator;
     return output.str();
 }
 
 // return fraction as a double
-double Rational::toDouble()
+void Rational::toDouble()
 {
-    return 0.0;
+    static_cast<double>(numerator);
+    static_cast<double>(denominator);
+    toRationalString();
 }

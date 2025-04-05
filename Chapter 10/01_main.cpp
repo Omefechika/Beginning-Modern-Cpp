@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 #include <stdexcept>
 #include <string>
 #include <type_traits>
@@ -29,7 +30,7 @@ int main() {
 
   // test overloaded string concatenation assignment operator
   cout << "\n\ns1 += s2 yields s1 = ";
-  s1 + s2; // concatenation
+  s1 += s2; // concatenation
   cout << s1;
 
   // test substr function
@@ -44,8 +45,8 @@ int main() {
   // test subscript out of range with string member function "at"
   try {
     cout << "Attempt to assign 'd' to s1.at(100) yields:\n";
-    s1.at(100) = 'd'; //ERROR: Subscript out of range.
-  } catch (out_of_range& exception) {
+    s1.at(100) = 'd'; // ERROR: Subscript out of range.
+  } catch (out_of_range &exception) {
     cout << "An exception occurred: " << exception.what() << endl;
-   }
+  }
 }
